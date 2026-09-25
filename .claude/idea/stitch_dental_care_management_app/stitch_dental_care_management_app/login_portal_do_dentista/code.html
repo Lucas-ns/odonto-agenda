@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#a36700","error-container":"#ffdad6","surface-container-highest":"#dae2fd","on-primary":"#ffffff","on-error-container":"#93000a","on-secondary":"#ffffff","outline":"#707881","on-primary-fixed-variant":"#004b73","on-background":"#131b2e","on-primary-fixed":"#001d31","on-tertiary":"#ffffff","secondary-container":"#6cf8bb","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","on-secondary-container":"#00714d","inverse-surface":"#283044","on-error":"#ffffff","surface-container-high":"#e2e7ff","tertiary":"#825100","surface":"#faf8ff","on-primary-container":"#fdfcff","primary-fixed-dim":"#93ccff","surface-tint":"#006398","secondary-fixed":"#6ffbbe","error":"#ba1a1a","on-tertiary-fixed":"#2a1700","on-tertiary-container":"#fffbff","tertiary-fixed":"#ffddb8","inverse-on-surface":"#eef0ff","background":"#faf8ff","surface-bright":"#faf8ff","primary-fixed":"#cce5ff","primary-container":"#007bb9","on-secondary-fixed":"#002113","primary":"#006194","surface-variant":"#dae2fd","secondary":"#006c49","secondary-fixed-dim":"#4edea3","surface-container":"#eaedff","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-surface":"#131b2e","on-surface-variant":"#3f4850","inverse-primary":"#93ccff","on-secondary-fixed-variant":"#005236","outline-variant":"#bfc7d2","on-tertiary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"1.5rem","space-md":"0.75rem","space-xs":"0.25rem",gutter:"1rem","space-3xl":"3rem","space-sm":"0.5rem","space-2xl":"2rem","space-lg":"1rem",margin:"1rem","margin-desktop":"2rem","space-2xs":"0.125rem","gutter-desktop":"1.5rem"},fontFamily:{"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"code-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex items-center justify-center"><main class="w-full flex items-center justify-center p-space-lg"><div class="flex flex-col w-full">
+<div class="w-full max-w-6xl mx-auto my-auto bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 relative">
+<!-- Left Column: Form & Clinical Access (7 cols) -->
+<div class="lg:col-span-7 p-space-xl sm:p-space-2xl md:p-space-3xl flex flex-col justify-between relative bg-surface-container-lowest z-10">
+<!-- Top Branding Bar -->
+<div>
+<div class="flex items-center justify-between gap-space-md mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<img alt="OdontoFlow Gestão Clínica" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ul__QHlnHs_mWzgg8dVToJcH43bCP72ydzkFcexkhenSw8ih8KHjOybzx_LKG5ikVl19f672xXZglS905vR4Q5BYhakxtAwntvUXsWj7ntbwPUnc_FE6YcuS0xRv9TcR1j7EvVk_bgrML5dPBTdnAo1_Jibyv9BbMq-AGW5GIghN7gA9ZjvFlOKXhlYqAnyXPdAaFOe2M_bRT00ot5aVG-UhIBH7xTCbX0BYUqpeRHBYfczrBojAC08xRG"/>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-2xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wide uppercase font-semibold">Servidor Clínico Ativo</span>
+</div>
+</div>
+<!-- Greeting & Subtext -->
+<div class="mb-space-2xl">
+<div class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md mb-space-2xs font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">stethoscope</span>
+            Portal do Cirurgião-Dentista & Gestor
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Prontuário e Gestão OdontoFlow
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+            Acesse o odontograma 3D, prontuários digitais com assinatura ICP-Brasil e a agenda cirúrgica do dia.
+          </p>
+</div>
+<!-- Access Mode Switcher -->
+<div class="bg-surface-container-low p-space-2xs rounded-lg flex gap-space-2xs mb-space-xl" id="authTabs">
+<button class="flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" id="tab-cro" onclick="switchAuthTab('cro')" type="button">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+            CRO / E-mail
+          </button>
+<button class="flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" id="tab-pin" onclick="switchAuthTab('pin')" type="button">
+<span class="material-symbols-outlined text-[18px]">dialpad</span>
+            PIN de Cadeira
+          </button>
+<button class="flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-all" id="tab-cert" onclick="switchAuthTab('cert')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+            Token ICP-Brasil
+          </button>
+</div>
+<!-- Dynamic Access Form Container -->
+<form class="space-y-space-md" id="loginForm" onsubmit="event.preventDefault(); triggerLogin();">
+<!-- State: Standard CRO / Email -->
+<div class="space-y-space-md" id="section-cro-fields">
+<div>
+<div class="flex justify-between items-center mb-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="identifier">
+<span>CRO / UF ou E-mail Profissional</span>
+</label>
+<span class="font-code-sm text-code-sm text-outline">Ex: CRO-SP 104.892</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[20px]">dentistry</span>
+<input class="w-full pl-10 pr-space-md py-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-bright transition-all" id="identifier" placeholder="Ex: CRO-SP 104.892 ou cirurgiao@odontoflow.com.br" required="" type="text" value="CRO-SP 104.892"/>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="password">Senha de Acesso Clínico</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#recuperar">Esqueceu sua senha?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[20px]">lock</span>
+<input class="w-full pl-10 pr-10 py-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-bright transition-all" id="password" placeholder="••••••••••••" required="" type="password" value="MasterSecret2025#"/>
+<button aria-label="Alternar visibilidade da senha" class="absolute right-space-md text-outline hover:text-on-surface transition-colors focus:outline-none flex items-center" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- State: PIN Rapid Consultorio (Hidden by Default) -->
+<div class="space-y-space-md hidden" id="section-pin-fields">
+<div>
+<label class="font-label-md text-label-md text-on-surface font-semibold mb-space-2xs block">Código de Sessão Chairside (4 dígitos)</label>
+<div class="flex gap-space-sm justify-between">
+<input class="w-14 h-14 text-center font-headline-lg text-headline-lg bg-surface-container-low rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" placeholder="•" type="text" value="4"/>
+<input class="w-14 h-14 text-center font-headline-lg text-headline-lg bg-surface-container-low rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" placeholder="•" type="text" value="8"/>
+<input class="w-14 h-14 text-center font-headline-lg text-headline-lg bg-surface-container-low rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" placeholder="•" type="text" value="2"/>
+<input class="w-14 h-14 text-center font-headline-lg text-headline-lg bg-surface-container-low rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" placeholder="•" type="text" value="9"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">PIN configurado previamente nas estações dos gabinetes operatórios.</p>
+</div>
+</div>
+<!-- State: ICP Token (Hidden by Default) -->
+<div class="space-y-space-md hidden" id="section-cert-fields">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex items-center gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-primary">security</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Dispositivo Criptográfico Detectado</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">e-CPF A3 (SafeNet iKey Token) • Válido até 11/2026</p>
+</div>
+</div>
+</div>
+<!-- Clinic & Unit Selector -->
+<div>
+<label class="font-label-md text-label-md text-on-surface font-semibold mb-space-2xs block" for="clinic-unit">
+              Unidade & Consultório Operatório
+            </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[20px]">apartment</span>
+<select class="w-full pl-10 pr-space-xl py-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="clinic-unit">
+<option selected="" value="jardins-02">Unidade Jardins — Gabinete 02 (Cirurgia & Implantes)</option>
+<option value="jardins-01">Unidade Jardins — Gabinete 01 (Ortodontia & Alinhadores)</option>
+<option value="itaim-04">Unidade Itaim Bibi — Sala Master 04</option>
+<option value="central-lab">Central Diagnóstica — Tomografia & Raio-X 3D</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Remember Clinic Device Checkbox -->
+<div class="flex items-center justify-between pt-space-2xs">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant">Lembrar neste computador clínico seguro</span>
+</label>
+<span class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-secondary bg-surface-container-low px-space-xs py-space-2xs rounded">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Terminal Seguro
+            </span>
+</div>
+<!-- Main CTA Button -->
+<button class="w-full py-space-md bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm active:scale-[0.99] font-semibold mt-space-lg" id="submitBtn" type="submit">
+<span>Entrar no Sistema Clínico</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Regulatory & LGPD Compliance Footer -->
+<div class="mt-space-2xl pt-space-lg border-t-0 bg-surface-container-low p-space-md rounded-lg">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-xs text-center sm:text-left">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm">Conforme Resolução CFO 234/2021 & LGPD da Saúde</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">key</span>
+              256-bit AES
+            </span>
+<a class="hover:text-primary transition-colors flex items-center gap-space-2xs font-semibold" href="tel:08008924000">
+<span class="material-symbols-outlined text-[14px]">call</span>
+              0800 892 4000
+            </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Clinic Status, Visual Overview & Inspiration (5 cols) -->
+<div class="lg:col-span-5 bg-gradient-to-br from-primary via-on-primary-fixed-variant to-inverse-surface p-space-xl md:p-space-2xl text-on-primary flex flex-col justify-between relative overflow-hidden">
+<!-- Subtle Decorative Geometry -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container opacity-20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-16 bottom-0 w-64 h-64 rounded-full bg-secondary opacity-15 blur-2xl pointer-events-none"></div>
+<!-- Top Clinical Shift Badge -->
+<div class="relative z-10">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-lowest/15 backdrop-blur-md px-space-md py-space-xs rounded-full mb-space-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">calendar_today</span>
+<span class="font-label-md text-label-md font-semibold tracking-wide text-surface-bright">Quarta-feira, 26 de Outubro</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary tracking-tight mb-space-xs">
+          Olá, Dr. Gabriel Silveira
+        </h2>
+<p class="font-body-md text-body-md text-surface-container-high opacity-90">
+          Sua escala cirúrgica e de reabilitação oral já está sincronizada e calibrada para o gabinete 02.
+        </p>
+</div>
+<!-- Clinic Highlights & Real-time Metrics (Card-based UI) -->
+<div class="relative z-10 my-space-xl space-y-space-md">
+<!-- Live Shift Quick Card -->
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-space-lg rounded-xl shadow-sm transition-all hover:bg-surface-container-lowest/15">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md font-semibold text-secondary-fixed flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px]">motion_photos_on</span>
+              Painel do Turno de Hoje
+            </span>
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-space-xs py-space-2xs rounded-full font-bold">Ao Vivo</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="bg-inverse-surface/30 p-space-sm rounded-lg">
+<div class="font-headline-xl text-headline-xl font-bold text-surface-bright leading-none mb-space-2xs">14</div>
+<div class="font-body-sm text-body-sm text-surface-container-highest">Pacientes Agendados</div>
+</div>
+<div class="bg-inverse-surface/30 p-space-sm rounded-lg">
+<div class="font-headline-xl text-headline-xl font-bold text-secondary-fixed-dim leading-none mb-space-2xs">2</div>
+<div class="font-body-sm text-body-sm text-surface-container-highest">Cirurgias Programadas</div>
+</div>
+</div>
+</div>
+<!-- Next Patient Preview Module -->
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-space-md rounded-xl shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest/20 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-surface-container-highest uppercase tracking-wider font-semibold">Próximo Atendimento • 08:30</p>
+<p class="font-headline-sm text-headline-sm font-semibold text-surface-bright">Mariana S. Albuquerque</p>
+<p class="font-body-sm text-body-sm text-surface-container-high opacity-80">Instalação de Implante Dente #21 (Carga Imediata)</p>
+</div>
+</div>
+<div class="hidden sm:block text-right">
+<span class="inline-block px-space-xs py-space-2xs rounded bg-surface-container-lowest/20 text-surface-bright font-code-sm text-code-sm">Box 02</span>
+</div>
+</div>
+<!-- Integrated Diagnostic Alert Banner -->
+<div class="bg-surface-container-lowest/10 backdrop-blur-md px-space-md py-space-sm rounded-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">medical_information</span>
+<p class="font-body-sm text-body-sm text-surface-container-high">
+            Tomografias de feixe cônico (CBCT) prontas para revisão no visualizador 3D integrado.
+          </p>
+</div>
+</div>
+<!-- Footer Clinical Quote & Release -->
+<div class="relative z-10 pt-space-md border-t-0 flex items-center justify-between font-label-sm text-label-sm text-surface-container-high/80">
+<span>OdontoFlow Suite v4.12 Enterprise</span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+          Sincronização Nuvem Contínua
+        </span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchAuthTab(type) {
+    const tabCro = document.getElementById('tab-cro');
+    const tabPin = document.getElementById('tab-pin');
+    const tabCert = document.getElementById('tab-cert');
+
+    const secCro = document.getElementById('section-cro-fields');
+    const secPin = document.getElementById('section-pin-fields');
+    const secCert = document.getElementById('section-cert-fields');
+
+    const submitBtnText = document.querySelector('#submitBtn span');
+
+    // Reset styles
+    [tabCro, tabPin, tabCert].forEach(btn => {
+      btn.className = 'flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-all';
+    });
+
+    secCro.classList.add('hidden');
+    secPin.classList.add('hidden');
+    secCert.classList.add('hidden');
+
+    if (type === 'cro') {
+      tabCro.className = 'flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all';
+      secCro.classList.remove('hidden');
+      submitBtnText.textContent = 'Entrar no Sistema Clínico';
+    } else if (type === 'pin') {
+      tabPin.className = 'flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all';
+      secPin.classList.remove('hidden');
+      submitBtnText.textContent = 'Liberar Cadeira Operatória';
+    } else if (type === 'cert') {
+      tabCert.className = 'flex-1 py-space-xs px-space-sm rounded-md font-label-md text-label-md flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all';
+      secCert.classList.remove('hidden');
+      submitBtnText.textContent = 'Autenticar com Certificado Digital';
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eye-icon');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      eyeIcon.textContent = 'visibility_off';
+    } else {
+      passwordInput.type = 'password';
+      eyeIcon.textContent = 'visibility';
+    }
+  }
+
+  function triggerLogin() {
+    const btn = document.getElementById('submitBtn');
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Autenticando Prontuário...</span>`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Acesso Autorizado!</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-secondary');
+    }, 1000);
+  }
+</script></main></body></html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#a36700","error-container":"#ffdad6","surface-container-highest":"#dae2fd","on-primary":"#ffffff","on-error-container":"#93000a","on-secondary":"#ffffff","outline":"#707881","on-primary-fixed-variant":"#004b73","on-background":"#131b2e","on-primary-fixed":"#001d31","on-tertiary":"#ffffff","secondary-container":"#6cf8bb","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","on-secondary-container":"#00714d","inverse-surface":"#283044","on-error":"#ffffff","surface-container-high":"#e2e7ff","tertiary":"#825100","surface":"#faf8ff","on-primary-container":"#fdfcff","primary-fixed-dim":"#93ccff","surface-tint":"#006398","secondary-fixed":"#6ffbbe","error":"#ba1a1a","on-tertiary-fixed":"#2a1700","on-tertiary-container":"#fffbff","tertiary-fixed":"#ffddb8","inverse-on-surface":"#eef0ff","background":"#faf8ff","surface-bright":"#faf8ff","primary-fixed":"#cce5ff","primary-container":"#007bb9","on-secondary-fixed":"#002113","primary":"#006194","surface-variant":"#dae2fd","secondary":"#006c49","secondary-fixed-dim":"#4edea3","surface-container":"#eaedff","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-surface":"#131b2e","on-surface-variant":"#3f4850","inverse-primary":"#93ccff","on-secondary-fixed-variant":"#005236","outline-variant":"#bfc7d2","on-tertiary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"1.5rem","space-md":"0.75rem","space-xs":"0.25rem",gutter:"1rem","space-3xl":"3rem","space-sm":"0.5rem","space-2xl":"2rem","space-lg":"1rem",margin:"1rem","margin-desktop":"2rem","space-2xs":"0.125rem","gutter-desktop":"1.5rem"},fontFamily:{"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"code-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="OdontoFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ul__QHlnHs_mWzgg8dVToJcH43bCP72ydzkFcexkhenSw8ih8KHjOybzx_LKG5ikVl19f672xXZglS905vR4Q5BYhakxtAwntvUXsWj7ntbwPUnc_FE6YcuS0xRv9TcR1j7EvVk_bgrML5dPBTdnAo1_Jibyv9BbMq-AGW5GIghN7gA9ZjvFlOKXhlYqAnyXPdAaFOe2M_bRT00ot5aVG-UhIBH7xTCbX0BYUqpeRHBYfczrBojAC08xRG"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">OdontoFlow</span><span class="font-label-sm text-label-sm text-on-surface-variant">Gestão Odontológica</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Navegação Clínica</div></div><nav class="px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="resumo-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Resumo & Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agenda-consultas" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="font-label-md text-label-md">Agenda & Consultas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="servicos-precos" href="#"><span class="material-symbols-outlined text-[20px]">dentistry</span><span class="font-label-md text-label-md">Serviços & Preços</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Sistema Conectado</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Sincronizado com WhatsApp API</p></div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-md text-label-md">Acesso Profissional</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-xl text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><span class="font-label-md text-label-md">Hoje, 24 de Outubro</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-xl text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">meeting_room</span><span class="font-label-md text-label-md">Consultório 01 (Principal)</span></div><div class="flex items-center gap-space-xs bg-secondary-container px-space-md py-space-xs rounded-full text-on-secondary-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold uppercase tracking-wide">Em Atendimento</span></div></div><div class="flex items-center gap-space-lg"><button aria-label="Confirmações WhatsApp" class="relative p-space-xs rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">chat</span><span class="absolute -top-1 -right-1 bg-secondary text-on-secondary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold">5</span></button><button aria-label="Notificações Gerais" class="relative p-space-xs rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-md"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Rafael Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant">CRO-SP 104.892</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(15,23,42,0.05)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRsXIF1z-ZJt0KCoc9SOOa-G8ruo-DyVl51rINpMISrlGGZXE70W_cPrL8LU1ds5vbeke0XfpGhu87zx78q97QMNO-YfQfLPtNNLISWwaFFWBbCuH07arwXip_uesHuIrmogesOmOUDjX2D7n-TsCJ-Mn9rm8exAFRKmkdYJueJQ973qj9MIWbDm78LekCXzKenPOS0-kytECgD2ydL3dbMhoU4_IadDlHLn9L33ZDv0kj7UOpLgkxHQ"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full p-space-xl gap-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Clínica Integrada • Sala Operatória 01</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-space-2xs">
+        Bom dia, Dr. Rafael Silva
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Visão clínica consolidada • 12 procedimentos agendados com 1 em cadeira.
+      </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-low p-space-2xs rounded-xl shadow-sm">
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold flex items-center gap-space-xs" id="btn-periodo-dia">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+          Hoje (24 Out)
+        </button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs" id="btn-periodo-mes">
+<span class="material-symbols-outlined text-[16px]">date_range</span>
+          Mês de Outubro
+        </button>
+</div>
+<button class="h-10 px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold rounded-xl shadow-md flex items-center gap-space-xs transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Novo Paciente / Consulta</span>
+</button>
+</div>
+</div>
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Consultas Hoje</span>
+<span class="font-headline-xl text-headline-xl text-on-surface mt-space-2xs font-bold">12</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex flex-wrap gap-space-xs items-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 4 Concluídas
+        </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> 1 Em Cadeira
+        </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          5 Confirmadas
+        </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">
+          2 Pendentes
+        </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Faturamento do Dia</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">R$ 4.850</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">,00</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-2xs text-secondary font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>108% da meta diária</span>
+</div>
+<span>Meta: R$ 4.500</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Ocupação da Cadeira</span>
+<span class="font-headline-xl text-headline-xl text-primary font-bold mt-space-2xs">85%</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">dentistry</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-1">
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-700" style="width: 85%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">6h 48m produtivas de 8h disponíveis</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Tempo Médio / Paciente</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">48</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-medium">min</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Dentro do padrão planejado (45-50 min)</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Desempenho Financeiro</span>
+<div class="flex items-baseline gap-space-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">R$ 68.420,00</h2>
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                +14.2% vs set
+              </span>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span>Receita (R$)</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded bg-secondary-fixed-dim"></span>
+<span>Atendimentos</span>
+</div>
+</div>
+</div>
+<div class="w-full h-56 flex flex-col justify-end pt-space-md">
+<div class="h-44 w-full flex items-end justify-between gap-2 px-space-xs">
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full flex items-end justify-center gap-1 h-36">
+<div class="w-full max-w-[14px] bg-primary/20 rounded-t group-hover:bg-primary transition-colors" style="height: 62%;"></div>
+<div class="w-full max-w-[14px] bg-secondary-fixed-dim rounded-t" style="height: 48%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">01-05</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full flex items-end justify-center gap-1 h-36">
+<div class="w-full max-w-[14px] bg-primary/20 rounded-t group-hover:bg-primary transition-colors" style="height: 78%;"></div>
+<div class="w-full max-w-[14px] bg-secondary-fixed-dim rounded-t" style="height: 65%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">06-10</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full flex items-end justify-center gap-1 h-36">
+<div class="w-full max-w-[14px] bg-primary/20 rounded-t group-hover:bg-primary transition-colors" style="height: 55%;"></div>
+<div class="w-full max-w-[14px] bg-secondary-fixed-dim rounded-t" style="height: 50%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">11-15</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full flex items-end justify-center gap-1 h-36">
+<div class="w-full max-w-[14px] bg-primary/20 rounded-t group-hover:bg-primary transition-colors" style="height: 90%;"></div>
+<div class="w-full max-w-[14px] bg-secondary-fixed-dim rounded-t" style="height: 82%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">16-20</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative">
+<div class="w-full flex items-end justify-center gap-1 h-36">
+<div class="w-full max-w-[14px] bg-primary rounded-t shadow-sm" style="height: 95%;"></div>
+<div class="w-full max-w-[14px] bg-secondary rounded-t shadow-sm" style="height: 88%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">21-24*</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 group relative opacity-40">
+<div class="w-full flex items-end justify-center gap-1 h-36 border-b border-dashed border-outline-variant">
+<div class="w-full max-w-[14px] bg-surface-container rounded-t" style="height: 70%;"></div>
+<div class="w-full max-w-[14px] bg-surface-container-high rounded-t" style="height: 60%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25-31</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<span>Volume acumulado: 142 atendimentos concluídos</span>
+<span>Ticket médio: R$ 481,80 / procedimento</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Rentabilidade Clínica</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Top Procedimentos do Mês</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold cursor-pointer hover:underline">Ver tabela analítica</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                Implante Unitário Cirúrgico
+              </span>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">7 unidades</span>
+<span class="font-bold text-on-surface">R$ 24.500,00</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 36%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                Alinhadores Ortodônticos (Fluxo Digital)
+              </span>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">4 novos casos</span>
+<span class="font-bold text-on-surface">R$ 18.200,00</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 27%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                Facetas em Resina & Porcelana
+              </span>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">12 dentes</span>
+<span class="font-bold text-on-surface">R$ 14.800,00</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                Endodontia Mecanizada (Molares)
+              </span>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">6 canais</span>
+<span class="font-bold text-on-surface">R$ 6.300,00</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 9%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-semibold text-on-surface flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-tint"></span>
+                Profilaxia & Clareamento Dental
+              </span>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">18 sessões</span>
+<span class="font-bold text-on-surface">R$ 4.620,00</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 6%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Alertas Imediatos</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+            2 Urgências
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-xl bg-error-container/20 flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                Retorno Pós-Op 48h
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hoje 16:30</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong>Mariana Souza:</strong> Exodontia molar 38/48 inclusos. Reavaliação de edema e remoção de sutura cirúrgica.
+            </p>
+</div>
+<div class="p-space-md rounded-xl bg-tertiary-fixed/30 flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+                Laboratório Entregue
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pronto</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Coroa Zircônia Dente 21 (Lab DentalArt) pronta na recepção para prova e cimentação de <strong>Carlos Eduardo</strong>.
+            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Próximos Pacientes</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Grade Completa</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                14:00 • Cadeira 01
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Em atendimento</span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-2xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait of middle-aged woman patient with warm smile in modern dental clinical environment, clean high key studio lighting, professional medical profile photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMHh1bWvEMKNxNESLQxks-13JyxW3OSyfVpmsupN61_-ASc7LIKlewwjuz4zs8QhiD5G8Yy5Dr27I-8r2ZreHDSj-SMyflo-iIWC4ile0iRR5rSDPAms7GO2Z446xlp7dMURTdUzD5BcQ6hbx1nXZFZ-EMk7QDCMIkwUenwezVr-DEjnq5vilBzfC8xpBzlGRGumQYij8MmBn_bdOdvqZOHeOjWI9b5AXPsouLZA789o5l6d-M8E1lGQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Beatriz Mendonça</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Restauração Estética 11 e 12</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-space-2xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">medical_services</span> Hipertensa
+              </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">attachment</span> RX Panorâmica
+              </span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                15:00 • 45 min
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Confirmado WhatsApp
+              </span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-2xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Close up studio portrait of a young professional male patient looking directly at camera, soft clinical dental office lighting, modern corporate medical vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB79PxXiof5J4X6x2rjghMM29zz1l6vyq9JUUfDWLk4z7PKfy6lLEc2ns8T30crbRqsliH3SnkbXAhKTPpZzeu1-8sVZBxU2K1YhB-kbrc2fvqtkcHf-eDgy69r-_g9yRVdfUcSFLCpdUpTTCUy61rH_2HeyWJft0RH-HPvm1cBWfvb6yKobQc51Qstu6_FLEl71R_WQ6mYeLFIOITyJmdEUJujKYcI38vZ6qXXGWFwsK9rY4cv8i7w0A"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Thiago Ribeiro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instalação Alinhador #04</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-space-2xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+                Escaneamento Itero Anexo
+              </span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                16:00 • 60 min
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Confirmado WhatsApp
+              </span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-2xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait of an elderly gentleman with silver hair smiling gently, clean bright medical aesthetic, high clarity clinical appointment avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMdRlhXGf0FDEXUOzd3nuMt7Fjxs9M-tvkN0pV08ERI1rjxeeSG7wi5e7JY_XrlTB3j6xxXXtgoVnbZwMleRmnogN2UiCWBmhvD29He4GYR21YP0R8DMCQcFIOku03LZCMWMsqgefcPxm6kiwU9Sc5HcAuN0IUyA9UO7nmAnkYpox7Hg0R-IxHtY-02nN-yv3-6YowPwGyjWcgkIFscD7fBP8owEKyiSiXsGKLnR8WQzc2YxV-w3bRA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Carlos Eduardo Ramos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cimentação Definitiva Dente 21</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-space-2xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">warning</span> Alergia Penicilina
+              </span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+                Prótese na Recepção
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const btnDia = document.getElementById('btn-periodo-dia');
+    const btnMes = document.getElementById('btn-periodo-mes');
+    if (!btnDia || !btnMes) return;
+
+    btnDia.addEventListener('click', function () {
+      btnDia.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold flex items-center gap-space-xs';
+      btnMes.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs';
+    });
+
+    btnMes.addEventListener('click', function () {
+      btnMes.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold flex items-center gap-space-xs';
+      btnDia.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs';
+    });
+  })();
+</script></main></div></body></html>

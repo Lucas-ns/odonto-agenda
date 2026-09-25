@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#a36700","error-container":"#ffdad6","surface-container-highest":"#dae2fd","on-primary":"#ffffff","on-error-container":"#93000a","on-secondary":"#ffffff","outline":"#707881","on-primary-fixed-variant":"#004b73","on-background":"#131b2e","on-primary-fixed":"#001d31","on-tertiary":"#ffffff","secondary-container":"#6cf8bb","surface-container-low":"#f2f3ff","surface-dim":"#d2d9f4","on-secondary-container":"#00714d","inverse-surface":"#283044","on-error":"#ffffff","surface-container-high":"#e2e7ff","tertiary":"#825100","surface":"#faf8ff","on-primary-container":"#fdfcff","primary-fixed-dim":"#93ccff","surface-tint":"#006398","secondary-fixed":"#6ffbbe","error":"#ba1a1a","on-tertiary-fixed":"#2a1700","on-tertiary-container":"#fffbff","tertiary-fixed":"#ffddb8","inverse-on-surface":"#eef0ff","background":"#faf8ff","surface-bright":"#faf8ff","primary-fixed":"#cce5ff","primary-container":"#007bb9","on-secondary-fixed":"#002113","primary":"#006194","surface-variant":"#dae2fd","secondary":"#006c49","secondary-fixed-dim":"#4edea3","surface-container":"#eaedff","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#ffb95f","on-surface":"#131b2e","on-surface-variant":"#3f4850","inverse-primary":"#93ccff","on-secondary-fixed-variant":"#005236","outline-variant":"#bfc7d2","on-tertiary-fixed-variant":"#653e00"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"1.5rem","space-md":"0.75rem","space-xs":"0.25rem",gutter:"1rem","space-3xl":"3rem","space-sm":"0.5rem","space-2xl":"2rem","space-lg":"1rem",margin:"1rem","margin-desktop":"2rem","space-2xs":"0.125rem","gutter-desktop":"1.5rem"},fontFamily:{"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.005em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"code-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="OdontoFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Ul__QHlnHs_mWzgg8dVToJcH43bCP72ydzkFcexkhenSw8ih8KHjOybzx_LKG5ikVl19f672xXZglS905vR4Q5BYhakxtAwntvUXsWj7ntbwPUnc_FE6YcuS0xRv9TcR1j7EvVk_bgrML5dPBTdnAo1_Jibyv9BbMq-AGW5GIghN7gA9ZjvFlOKXhlYqAnyXPdAaFOe2M_bRT00ot5aVG-UhIBH7xTCbX0BYUqpeRHBYfczrBojAC08xRG"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">OdontoFlow</span><span class="font-label-sm text-label-sm text-on-surface-variant">Gestão Odontológica</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Navegação Clínica</div></div><nav class="px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="resumo-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Resumo & Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="agenda-consultas" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="font-label-md text-label-md">Agenda & Consultas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="servicos-precos" href="#"><span class="material-symbols-outlined text-[20px]">dentistry</span><span class="font-label-md text-label-md">Serviços & Preços</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Sistema Conectado</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Sincronizado com WhatsApp API</p></div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-md text-label-md">Acesso Profissional</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-xl text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><span class="font-label-md text-label-md">Hoje, 24 de Outubro</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-xl text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">meeting_room</span><span class="font-label-md text-label-md">Consultório 01 (Principal)</span></div><div class="flex items-center gap-space-xs bg-secondary-container px-space-md py-space-xs rounded-full text-on-secondary-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold uppercase tracking-wide">Em Atendimento</span></div></div><div class="flex items-center gap-space-lg"><button aria-label="Confirmações WhatsApp" class="relative p-space-xs rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">chat</span><span class="absolute -top-1 -right-1 bg-secondary text-on-secondary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold">5</span></button><button aria-label="Notificações Gerais" class="relative p-space-xs rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-md"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Dr. Rafael Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant">CRO-SP 104.892</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(15,23,42,0.05)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRsXIF1z-ZJt0KCoc9SOOa-G8ruo-DyVl51rINpMISrlGGZXE70W_cPrL8LU1ds5vbeke0XfpGhu87zx78q97QMNO-YfQfLPtNNLISWwaFFWBbCuH07arwXip_uesHuIrmogesOmOUDjX2D7n-TsCJ-Mn9rm8exAFRKmkdYJueJQ973qj9MIWbDm78LekCXzKenPOS0-kytECgD2ydL3dbMhoU4_IadDlHLn9L33ZDv0kj7UOpLgkxHQ"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Top Action & Title Header (No duplicate H1 brand, clinical contextual header) -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[16px]">point_of_sale</span>
+<span>Gestão Financeira & Tabela Clínica</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Serviços Prestados & Honorários</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gerencie a tabela de procedimentos, custos de materiais e tempo médio de cadeira.</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="h-10 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md flex items-center gap-space-xs transition-colors shadow-sm" id="btn-open-simulator" type="button">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Simulador de Margem & Custo-Hora</span>
+</button>
+<button class="h-10 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs transition-colors shadow-sm" id="btn-open-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Novo Procedimento</span>
+</button>
+</div>
+</div>
+<!-- Clinical Performance Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Procedimento Mais Realizado</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-space-2xs">Profilaxia Ultrassom</span>
+<div class="flex items-center gap-space-xs mt-space-2xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>128 execuções este mês (34% do volume)</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">dentistry</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Ticket Médio por Paciente</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-space-2xs">R$ 840,00</span>
+<div class="flex items-center gap-space-xs mt-space-2xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+12.4% vs. trimestre anterior</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Margem Líquida Média</span>
+<div class="flex items-baseline gap-space-xs mt-space-2xs">
+<span class="font-headline-md text-headline-md text-on-surface">62%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pós-insumos e taxa de cartão</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-xs overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 62%"></div>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[26px]">pie_chart</span>
+</div>
+</div>
+</div>
+<!-- Search, Filters, & Category Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Search Input & Quick Filter Bar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant rounded-xl font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" id="procedure-search" placeholder="Buscar procedimento por nome, código TUSS ou especialidade..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-10 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Filtros Avançados</span>
+</button>
+<button class="h-10 px-space-md rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar Tabela</span>
+</button>
+</div>
+</div>
+<!-- Categories Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 text-nowrap scrollbar-none" id="category-pills">
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary text-on-primary font-semibold transition-colors" data-filter="all" type="button">
+          Todos (38)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="clinica-geral" type="button">
+          Clínica Geral & Prevenção (11)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="ortodontia" type="button">
+          Ortodontia (6)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="implantodontia" type="button">
+          Implantodontia & Cirurgia (7)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="endodontia" type="button">
+          Endodontia (5)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="estetica" type="button">
+          Estética & Prótese (6)
+        </button>
+<button class="category-btn px-space-md py-space-xs rounded-full font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors" data-filter="periodontia" type="button">
+          Periodontia (3)
+        </button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-lg font-semibold">Procedimento & TUSS</th>
+<th class="py-space-sm px-space-md font-semibold">Especialidade</th>
+<th class="py-space-sm px-space-md font-semibold">Cadeira</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Custo Insumos</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Honorário Particular</th>
+<th class="py-space-sm px-space-md font-semibold">Condições Aceitas</th>
+<th class="py-space-sm px-space-lg text-right font-semibold">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-on-surface" id="procedures-tbody">
+<!-- Row 1: Profilaxia -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="clinica-geral">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">clean_hands</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Profilaxia e Remoção de Tártaro com Jato de Bicarbonato
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 81.00.003-0 • Registro ANVISA ativo</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-medium">
+                  Clínica Geral & Prevenção
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>40 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 28,50</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 220,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 87%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Débito</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito 3x</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Resina -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="clinica-geral">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">dentistry</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Restauração em Resina Fotopolimerizável 2 Faces
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 81.00.021-8 • Resina Nanoparticulada 3M Filtek</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-medium">
+                  Dentística Restauradora
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>45 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 42,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 260,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 83%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito até 4x</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Endodontia -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="endodontia">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">pulse_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Endodontia de Molar com Instrumentação Rotatória
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 82.00.087-4 • 3 a 4 condutos radiculares</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant font-medium">
+                  Endodontia Especializada
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>90 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 145,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 950,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 76%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix (-5%)</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito até 6x</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Implante -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="implantodontia">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">hardware</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Implante Titânio Nacional Neodent com Cicatrizador
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 84.00.012-9 • Fase Cirúrgica Cone Morse</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-medium">
+                  Implantodontia & Cirurgia
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>60 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 410,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 1.650,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 58%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito até 12x</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Boleto</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Zircônia -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="estetica">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Coroa em Zircônia Pura com Escaneamento 3D Intraoral
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 85.10.043-1 • Sistema CAD/CAM + Fresagem Protética</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-medium">
+                  Prótese & Reabilitação
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_view_week</span>
+<span>2 sessões</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 580,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 2.100,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 52%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito até 10x</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Boleto 4x</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Clareamento -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="estetica">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">flare</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Clareamento Dental Combinado Consultório + Caseiro
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 85.00.022-4 • 1 sessão LED + 2 bisnagas Peróxido de Carbamida</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-medium">
+                  Estética Dental
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>60 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 190,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 1.150,00</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Margem: 74%</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Crédito até 6x</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Ortodontia Autoligado -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group" data-category="ortodontia">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                      Manutenção de Aparelho Ortodôntico Autoligado
+                    </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">TUSS: 86.00.001-2 • Troca de arcos estéticos e torque</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed-dim text-on-primary-fixed-variant font-medium">
+                  Ortodontia
+                </span>
+</td>
+<td class="py-space-md px-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span>30 min</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-body-md text-body-md text-on-surface-variant">
+<span>R$ 22,00</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">R$ 190,00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recorrência mensal</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Recorrência Cartão</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-surface-container text-on-surface">Pix</span>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" title="Histórico de Preços" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Mais opções" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Summary Footer -->
+<div class="bg-surface-container-low/50 px-space-lg py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Exibindo <span class="font-semibold text-on-surface">7</span> de <span class="font-semibold text-on-surface">38</span> procedimentos cadastrados
+        </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded-lg text-outline-variant font-label-sm text-label-sm cursor-not-allowed" disabled="" type="button">Anterior</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center justify-center" type="button">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center" type="button">3</button>
+<button class="px-space-sm py-1 rounded-lg text-primary hover:bg-surface-container font-label-sm text-label-sm" type="button">Próximo</button>
+</div>
+</div>
+</div>
+<!-- Dual Informative Panels (Dentist Tips & Cost Benchmark) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Clinical Cost Structure -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase">Parâmetros Operacionais</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Composição do Custo Hora-Clínica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Estimativa de rateio para cada 60 minutos de ocupação de cadeira odontológica.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">speed</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-body-sm text-body-sm">
+<span class="text-on-surface">Custo Fixo Base (Aluguel, Energia, Recepção)</span>
+<span class="font-semibold text-on-surface">R$ 95,00 / hora</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 55%"></div>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm mt-space-xs">
+<span class="text-on-surface">Esterilização, EPIs & Biossegurança por Paciente</span>
+<span class="font-semibold text-on-surface">R$ 22,00 / sessão</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+<div class="flex justify-between items-center font-body-sm text-body-sm mt-space-xs">
+<span class="text-on-surface">Depreciação de Equipamentos (Autoclave, Compressor)</span>
+<span class="font-semibold text-on-surface">R$ 14,00 / hora</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Custo Clínico Efetivo Total:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">R$ 131,00 / hora</span>
+</div>
+</div>
+<!-- Quick Tips & TUSS Compliance -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Conformidade e Regulação</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Padrão TUSS & Atualização de Honorários</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Alinhamento aos termos da ANS e orientações éticas do Conselho Federal de Odontologia.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]">verified</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Integração de Códigos TUSS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Permite a geração automatizada de guias de reembolso para pacientes de convênios livres.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">percent</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Reajuste Automático por Inflação</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Próxima sugestão de recalibragem da tabela agendada para Janeiro/2025.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Última revisão do catálogo: 18 de Outubro de 2024</span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+            Manual CFO <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- SIMULATOR DRAWER / MODAL -->
+<div class="fixed inset-0 z-50 flex justify-end bg-inverse-surface/40 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-none" id="simulator-drawer">
+<div class="w-full max-w-lg bg-surface-container-lowest h-full shadow-2xl flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300" id="simulator-panel">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calculate</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Simulador de Honorários & Lucro</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Formulação de preço baseada em custos reais</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center" id="btn-close-simulator" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Form Body -->
+<div class="p-space-lg flex flex-col gap-space-md flex-1">
+<!-- Field: Procedure Name -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Nome do Procedimento</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" type="text" value="Restauração Estética Anterior (Exemplo)"/>
+</div>
+<!-- Field: Chair Time -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Tempo Estimado na Cadeira</label>
+<span class="font-code-sm text-code-sm text-primary font-bold" id="label-chair-time">45 minutos</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" id="input-chair-time" max="180" min="15" step="15" type="range" value="45"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>15 min</span>
+<span>60 min</span>
+<span>120 min</span>
+<span>180 min</span>
+</div>
+</div>
+<!-- Insumos & Laboratório -->
+<div class="grid grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Custo de Insumos (R$)</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" id="input-materials" type="number" value="38.00"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Protético / Laboratório (R$)</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" id="input-lab" type="number" value="0.00"/>
+</div>
+</div>
+<!-- Desired Profit Margin Slider -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Margem de Lucro Desejada</label>
+<span class="font-code-sm text-code-sm text-secondary font-bold" id="label-margin">65%</span>
+</div>
+<input class="w-full accent-secondary cursor-pointer" id="input-margin" max="85" min="20" step="5" type="range" value="65"/>
+<div class="flex justify-between text-[11px] text-on-surface-variant">
+<span>20% (Mínimo)</span>
+<span>50% (Equilíbrio)</span>
+<span>85% (Alta Margem)</span>
+</div>
+</div>
+<!-- Real-Time Calculation Result Card -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Detalhamento Financeiro Apurado</span>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Custo Proporcional Hora-Clínica:</span>
+<span class="font-semibold" id="res-chair-cost">R$ 98,25</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Materiais Diretos + Laboratório:</span>
+<span class="font-semibold" id="res-materials-cost">R$ 38,00</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Taxa Média Operadora / Impostos (10%):</span>
+<span class="font-semibold" id="res-taxes-cost">R$ 38,90</span>
+</div>
+<div class="h-px bg-surface-container my-1"></div>
+<div class="flex justify-between items-baseline">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Preço de Venda Sugerido:</span>
+<span class="font-label-sm text-label-sm text-secondary">Lucro Líquido Dentista: <strong id="res-net-profit">R$ 252,85</strong></span>
+</div>
+<span class="font-headline-lg text-headline-lg font-bold text-primary" id="res-suggested-price">R$ 389,00</span>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-end gap-space-sm">
+<button class="h-10 px-space-md rounded-xl hover:bg-surface-container text-on-surface-variant font-label-md text-label-md" id="btn-cancel-simulator" type="button">
+          Fechar
+        </button>
+<button class="h-10 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Aplicar como Honorário</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL: NOVO PROCEDIMENTO -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-xs transition-opacity duration-200 opacity-0 pointer-events-none p-space-md" id="new-procedure-modal">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-2xl flex flex-col overflow-hidden max-h-[90vh]">
+<!-- Modal Header -->
+<div class="p-space-lg flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">add_task</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cadastrar Novo Procedimento</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adicione o serviço clínico ao catálogo oficial do consultório</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg flex flex-col gap-space-md overflow-y-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-space-2xs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Nome do Procedimento *</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ex: Faceta em Porcelana E-Max" type="text"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Código TUSS (ANS)</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="85.10.000-0" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Especialidade Clínica *</label>
+<select class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>Clínica Geral & Prevenção</option>
+<option>Ortodontia</option>
+<option>Implantodontia & Cirurgia</option>
+<option>Endodontia</option>
+<option>Estética & Prótese</option>
+<option>Periodontia</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Duração Média da Cadeira</label>
+<select class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>30 minutos</option>
+<option>45 minutos</option>
+<option>60 minutos</option>
+<option>90 minutos</option>
+<option>120 minutos</option>
+<option>Múltiplas sessões</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Custo de Materiais (R$)</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="0,00" type="number"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Honorário Particular (R$) *</label>
+<input class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-semibold focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="0,00" type="number"/>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Parcelamento Máx.</label>
+<select class="h-10 px-space-md rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>À vista / Pix apenas</option>
+<option>Até 3x sem juros</option>
+<option>Até 6x sem juros</option>
+<option>Até 12x no cartão</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Descrição / Observações Clínicas</label>
+<textarea class="p-space-sm rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Descreva orientações pré-operatórias, marcas de preferência ou kits cirúrgicos..." rows="2"></textarea>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-lg bg-surface-container-lowest flex items-center justify-end gap-space-sm">
+<button class="h-10 px-space-md rounded-xl hover:bg-surface-container text-on-surface-variant font-label-md text-label-md" id="btn-cancel-modal" type="button">
+          Cancelar
+        </button>
+<button class="h-10 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center gap-space-xs shadow-sm" id="btn-submit-new-procedure" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Salvar Procedimento</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Simulator Drawer Toggle
+    const simulatorDrawer = document.getElementById('simulator-drawer');
+    const simulatorPanel = document.getElementById('simulator-panel');
+    const btnOpenSimulator = document.getElementById('btn-open-simulator');
+    const btnCloseSimulator = document.getElementById('btn-close-simulator');
+    const btnCancelSimulator = document.getElementById('btn-cancel-simulator');
+
+    function openSimulator() {
+      simulatorDrawer.classList.remove('opacity-0', 'pointer-events-none');
+      simulatorPanel.classList.remove('translate-x-full');
+    }
+
+    function closeSimulator() {
+      simulatorDrawer.classList.add('opacity-0', 'pointer-events-none');
+      simulatorPanel.classList.add('translate-x-full');
+    }
+
+    btnOpenSimulator?.addEventListener('click', openSimulator);
+    btnCloseSimulator?.addEventListener('click', closeSimulator);
+    btnCancelSimulator?.addEventListener('click', closeSimulator);
+
+    // Modal New Procedure Toggle
+    const newModal = document.getElementById('new-procedure-modal');
+    const btnOpenModal = document.getElementById('btn-open-modal');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const btnCancelModal = document.getElementById('btn-cancel-modal');
+    const btnSubmitModal = document.getElementById('btn-submit-new-procedure');
+
+    function openModal() {
+      newModal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeModal() {
+      newModal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    btnOpenModal?.addEventListener('click', openModal);
+    btnCloseModal?.addEventListener('click', closeModal);
+    btnCancelModal?.addEventListener('click', closeModal);
+    btnSubmitModal?.addEventListener('click', () => {
+      closeModal();
+    });
+
+    // Dynamic Simulator Calculator Logic
+    const inputChairTime = document.getElementById('input-chair-time');
+    const labelChairTime = document.getElementById('label-chair-time');
+    const inputMaterials = document.getElementById('input-materials');
+    const inputLab = document.getElementById('input-lab');
+    const inputMargin = document.getElementById('input-margin');
+    const labelMargin = document.getElementById('label-margin');
+
+    const resChairCost = document.getElementById('res-chair-cost');
+    const resMaterialsCost = document.getElementById('res-materials-cost');
+    const resTaxesCost = document.getElementById('res-taxes-cost');
+    const resNetProfit = document.getElementById('res-net-profit');
+    const resSuggestedPrice = document.getElementById('res-suggested-price');
+
+    const HOURLY_CLINIC_RATE = 131.0; // R$ per 60 mins
+
+    function calculateSimulator() {
+      const minutes = parseInt(inputChairTime.value, 10);
+      const materials = parseFloat(inputMaterials.value) || 0;
+      const lab = parseFloat(inputLab.value) || 0;
+      const margin = parseInt(inputMargin.value, 10);
+
+      labelChairTime.textContent = minutes + ' minutos';
+      labelMargin.textContent = margin + '%';
+
+      const chairCost = (minutes / 60) * HOURLY_CLINIC_RATE;
+      const directCosts = materials + lab;
+      const baseCost = chairCost + directCosts;
+
+      // Price formula: (Base Cost / (1 - (margin% + 10% taxes)))
+      const taxRate = 0.10;
+      const marginRate = margin / 100;
+      const denominator = Math.max(0.05, 1 - (marginRate + taxRate));
+      const finalPrice = baseCost / denominator;
+      const taxes = finalPrice * taxRate;
+      const netProfit = finalPrice - baseCost - taxes;
+
+      resChairCost.textContent = 'R$ ' + chairCost.toFixed(2).replace('.', ',');
+      resMaterialsCost.textContent = 'R$ ' + directCosts.toFixed(2).replace('.', ',');
+      resTaxesCost.textContent = 'R$ ' + taxes.toFixed(2).replace('.', ',');
+      resNetProfit.textContent = 'R$ ' + netProfit.toFixed(2).replace('.', ',');
+      resSuggestedPrice.textContent = 'R$ ' + finalPrice.toFixed(2).replace('.', ',');
+    }
+
+    inputChairTime?.addEventListener('input', calculateSimulator);
+    inputMaterials?.addEventListener('input', calculateSimulator);
+    inputLab?.addEventListener('input', calculateSimulator);
+    inputMargin?.addEventListener('input', calculateSimulator);
+
+    // Initial calculation trigger
+    calculateSimulator();
+
+    // Category Tabs Filtering
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const rows = document.querySelectorAll('#procedures-tbody tr');
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+        const filter = btn.getAttribute('data-filter');
+        rows.forEach(row => {
+          if (filter === 'all' || row.getAttribute('data-category') === filter) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Real-time Search input filtering
+    const searchInput = document.getElementById('procedure-search');
+    searchInput?.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  })();
+</script></main></div></body></html>
