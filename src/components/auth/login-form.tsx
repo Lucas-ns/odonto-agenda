@@ -10,14 +10,13 @@ import { Label } from "@/components/ui/label";
 import {
   loginAction,
   resetPasswordAction,
-  signUpAction,
   type AuthState,
 } from "@/server/actions/auth";
 
 const initial: AuthState = {};
 
 export function LoginForm() {
-  const [mode, setMode] = useState<"login" | "signup" | "reset">("login");
+  const [mode, setMode] = useState<"login" | "reset">("login");
   const [showPassword, setShowPassword] = useState(false);
   const [remember, setRemember] = useState(true);
 
@@ -25,24 +24,14 @@ export function LoginForm() {
     loginAction,
     initial,
   );
-  const [signupState, signupFormAction, signupPending] = useActionState(
-    signUpAction,
-    initial,
-  );
   const [resetState, resetFormAction, resetPending] = useActionState(
     resetPasswordAction,
     initial,
   );
 
-  const state =
-    mode === "login" ? loginState : mode === "signup" ? signupState : resetState;
-  const pending = loginPending || signupPending || resetPending;
-  const action =
-    mode === "login"
-      ? loginFormAction
-      : mode === "signup"
-        ? signupFormAction
-        : resetFormAction;
+  const state = mode === "login" ? loginState : resetState;
+  const pending = loginPending || resetPending;
+  const action = mode === "login" ? loginFormAction : resetFormAction;
 
   return (
     <div className="grid w-full max-w-5xl overflow-hidden rounded-2xl bg-card shadow-xl lg:grid-cols-12">
@@ -60,32 +49,16 @@ export function LoginForm() {
             Portal do Cirurgião-Dentista
           </p>
           <h1 className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            {mode === "reset"
-              ? "Recuperar senha"
-              : mode === "signup"
-                ? "Criar conta"
-                : "Bem-vindo ao OdontoFlow"}
+            {mode === "reset" ? "Recuperar senha" : "Bem-vindo ao OdontoFlow"}
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
             {mode === "reset"
               ? "Informe seu e-mail para receber o link de redefinição."
-              : "Gerencie agenda, pacientes e serviços do consultório."}
+              : "Acesso exclusivo por convite. Gerencie agenda, pacientes e serviços."}
           </p>
         </div>
 
         <form action={action} className="mt-8 space-y-4">
-          {mode === "signup" ? (
-            <div className="space-y-2">
-              <Label htmlFor="name">Nome</Label>
-              <Input
-                id="name"
-                name="name"
-                placeholder="Dr(a). Seu Nome"
-                autoComplete="name"
-              />
-            </div>
-          ) : null}
-
           <div className="space-y-2">
             <Label htmlFor="email">E-mail profissional</Label>
             <div className="relative">
@@ -106,15 +79,13 @@ export function LoginForm() {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password">Senha</Label>
-                {mode === "login" ? (
-                  <button
-                    type="button"
-                    className="text-xs font-semibold text-primary hover:underline"
-                    onClick={() => setMode("reset")}
-                  >
-                    Esqueceu a senha?
-                  </button>
-                ) : null}
+                <button
+                  type="button"
+                  className="text-xs font-semibold text-primary hover:underline"
+                  onClick={() => setMode("reset")}
+                >
+                  Esqueceu a senha?
+                </button>
               </div>
               <div className="relative">
                 <Lock className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
@@ -124,9 +95,7 @@ export function LoginForm() {
                   type={showPassword ? "text" : "password"}
                   required
                   minLength={6}
-                  autoComplete={
-                    mode === "signup" ? "new-password" : "current-password"
-                  }
+                  autoComplete="current-password"
                   placeholder="••••••••"
                   className="pr-10 pl-10"
                 />
@@ -172,35 +141,21 @@ export function LoginForm() {
               ? "Aguarde…"
               : mode === "reset"
                 ? "Enviar link"
-                : mode === "signup"
-                  ? "Criar conta"
-                  : "Entrar"}
+                : "Entrar"}
           </Button>
         </form>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
-          {mode === "login" ? (
-            <>
-              Ainda não tem conta?{" "}
-              <button
-                type="button"
-                className="font-semibold text-primary hover:underline"
-                onClick={() => setMode("signup")}
-              >
-                Criar conta
-              </button>
-            </>
+          {mode === "reset" ? (
+            <button
+              type="button"
+              className="font-semibold text-primary hover:underline"
+              onClick={() => setMode("login")}
+            >
+              Voltar ao login
+            </button>
           ) : (
-            <>
-              Já tem conta?{" "}
-              <button
-                type="button"
-                className="font-semibold text-primary hover:underline"
-                onClick={() => setMode("login")}
-              >
-                Fazer login
-              </button>
-            </>
+            <>Acesso apenas por convite do administrador.</>
           )}
         </p>
       </div>

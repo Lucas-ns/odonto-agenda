@@ -1,6 +1,5 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { loginSchema, resetPasswordSchema } from "@/lib/validations/auth";
@@ -81,49 +80,10 @@ export async function resetPasswordAction(
 
 export async function signUpAction(
   _prev: AuthState,
-  formData: FormData,
+  _formData: FormData,
 ): Promise<AuthState> {
-  const email = String(formData.get("email") ?? "");
-  const password = String(formData.get("password") ?? "");
-  const name = String(formData.get("name") ?? "");
-
-  const parsed = loginSchema.safeParse({ email, password });
-  if (!parsed.success) {
-    return { error: parsed.error.issues[0]?.message ?? "Dados inválidos" };
-  }
-
-  const supabase = await createClient();
-  const origin =
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-
-  const { data, error } = await supabase.auth.signUp({
-    email: parsed.data.email,
-    password: parsed.data.password,
-    options: {
-      data: { name: name || email.split("@")[0] },
-      emailRedirectTo: `${origin}/auth/callback`,
-    },
-  });
-
-  if (error) {
-    return { error: error.message };
-  }
-
-  // Conta já existia (Supabase não revela por segurança) ou e-mail precisa confirmar
-  if (data.user && (!data.user.identities || data.user.identities.length === 0)) {
-    return {
-      error: "Este e-mail já está cadastrado. Faça login ou recupere a senha.",
-    };
-  }
-
-  if (!data.session) {
-    return {
-      success:
-        "Conta criada. Confirme o e-mail pelo link enviado (ou desative “Confirm email” no Supabase para entrar direto em dev).",
-    };
-  }
-
-  await ensureProfileAndSeed();
-  revalidatePath("/", "layout");
-  redirect("/agenda");
+  return {
+    error:
+      "Cadastro público desativado. Peça um convite ao administrador (Supabase → Authentication → Users → Invite).",
+  };
 }
